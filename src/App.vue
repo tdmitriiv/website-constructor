@@ -11,9 +11,7 @@
     </v-app-bar>
 
     <v-content>
-      TODO
-      button
-      page list
+      <router-view/>
     </v-content>
   </v-app>
 </template>
