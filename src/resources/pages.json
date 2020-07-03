@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Контакты",
+    "url": "contacts",
+    "containers": [
+      {
+        "id": 1,
+        "sections": [
+
+        ],
+        "settings": {
+
+        }
+      }
+    ]
+  }
+]
