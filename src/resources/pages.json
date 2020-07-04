@@ -14,5 +14,21 @@
         }
       }
     ]
+  },
+  {
+    "id": 2,
+    "name": "О компании",
+    "url": "about",
+    "containers": [
+      {
+        "id": 1,
+        "sections": [
+
+        ],
+        "settings": {
+
+        }
+      }
+    ]
   }
 ]
