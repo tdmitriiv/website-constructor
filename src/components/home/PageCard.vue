@@ -26,6 +26,7 @@
               icon
               v-bind="attrs"
               v-on="on"
+              @click="remove"
             >
               <v-icon>mdi-delete</v-icon>
             </v-btn>
@@ -54,11 +55,21 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
+import { namespace } from 'vuex-class';
 import { Page } from '@/types/entities';
+
+const page = namespace('page');
 
 @Component
 export default class PageCard extends Vue {
   @Prop()
   page!: Page
+
+  @page.Action('removePage')
+  removePage!: (id: number) => void;
+
+  remove(): void {
+    this.removePage(this.page.id);
+  }
 }
 </script>

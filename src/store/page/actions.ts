@@ -9,6 +9,9 @@ const actions: ActionTree<PagesState, RootState> = {
     commit('loadList', pages);
     return pages;
   },
+  removePage({ commit }, id: number): void {
+    commit('remove', id);
+  },
 };
 
 export default actions;

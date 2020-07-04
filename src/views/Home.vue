@@ -24,13 +24,16 @@ const page = namespace('page');
   },
 })
 export default class Home extends Vue {
-  pages: Page[] = [];
+  // pages: Page[] = [];
 
   @page.Action('fetchPages')
   fetchPages!: () => Promise<Page[]>
 
+  @page.State('pages')
+  pages!: Page[]
+
   async beforeMount() {
-    this.pages = await this.fetchPages();
+    await this.fetchPages();
   }
 }
 </script>
