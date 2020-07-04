@@ -58,15 +58,23 @@
 <script lang="ts">
 import Vue from 'vue';
 import Component from 'vue-class-component';
+import {
+  Action,
+  namespace,
+} from 'vuex-class';
 import { Page } from '@/types/entities';
-import { getList } from '@/http/apiPages';
+
+const page = namespace('page');
 
 @Component
 export default class Home extends Vue {
   pages: Page[] = [];
 
+  @page.Action('fetchPages')
+  fetchPages!: () => Promise<Page[]>
+
   async beforeMount() {
-    this.pages = await getList();
+    this.pages = await this.fetchPages();
   }
 }
 </script>
