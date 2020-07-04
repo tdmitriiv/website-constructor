@@ -6,11 +6,14 @@ import { Page } from '@/types/entities';
 const actions: ActionTree<PagesState, RootState> = {
   async fetchPages({ commit }): Promise<Page[]> {
     const pages = await getList();
-    commit('loadList', pages);
+    commit('updateList', pages);
     return pages;
   },
   removePage({ commit }, id: number): void {
     commit('remove', id);
+  },
+  updatePageList({ commit }, pages: Page[]) {
+    commit('updateList', pages);
   },
 };
 
