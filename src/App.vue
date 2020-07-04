@@ -5,16 +5,23 @@
       color="primary"
       dark
     >
-      <div class="d-flex align-center">
-        Website constructor
-      </div>
+      <router-link :to="{ name: 'Home' }">
+        <v-toolbar-title class="white--text">
+          Website constructor
+        </v-toolbar-title>
+      </router-link>
+      <v-spacer></v-spacer>
+      <v-btn :to="{ name: 'Create page' }">
+        <v-icon left>mdi-plus</v-icon>
+        Create
+      </v-btn>
     </v-app-bar>
 
-    <v-content>
+    <v-main>
       <v-container>
         <router-view/>
       </v-container>
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
