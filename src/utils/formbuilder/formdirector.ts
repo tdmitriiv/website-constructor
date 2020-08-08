@@ -1,9 +1,10 @@
 import { VTextField } from 'vuetify/lib';
 import PageProvider from '@/components/create/PageProvider.vue';
 import FormBuilder from '@/utils/formbuilder/formbuilder';
+import Containers from '@/components/FormBuilder/Containers.vue';
 
 export default class FormDirector {
-  builder: FormBuilder
+  builder: FormBuilder;
 
   constructor(builder: FormBuilder) {
     this.builder = builder;
@@ -16,6 +17,11 @@ export default class FormDirector {
         component: VTextField,
         label: 'Наименование',
         name: 'name',
+      })
+      .addField({
+        component: Containers,
+        label: 'Контейнеры',
+        name: 'containers',
       })
       .build();
   }

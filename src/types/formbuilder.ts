@@ -10,6 +10,6 @@ export interface FormBuilderField {
 }
 
 export interface FormBuilderProps {
-  fields: Array<FormBuilderField>
+  fields: FormBuilderField[]
 }
 
