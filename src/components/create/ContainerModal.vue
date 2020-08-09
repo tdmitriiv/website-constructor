@@ -24,14 +24,14 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
+import { Component, Provide } from 'vue-property-decorator';
 import { VSlider } from 'vuetify/lib';
 import FormBuilder from '@/utils/formbuilder/formbuilder';
-import PageProvider from '@/components/create/PageProvider.vue';
+import { Container } from '@/types/entities';
 
 @Component({
   components: {
-    ContainerForm: new FormBuilder().withProvider(PageProvider)
+    ContainerForm: new FormBuilder()
       .addField({
         component: VSlider,
         label: 'Количество секций',
@@ -49,7 +49,14 @@ import PageProvider from '@/components/create/PageProvider.vue';
       .build(),
   },
 })
-export default class ContainerModal extends Vue {}
+export default class ContainerModal extends Vue {
+  @Provide('post') post = (container: Container) => {
+    console.log('create container', container);
+    return {
+      success: 'Успех',
+    };
+  }
+}
 </script>
 
 <style scoped>

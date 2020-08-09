@@ -38,9 +38,12 @@ export default class FormBuilder {
         },
       },
       render(createElement) {
-        return createElement(Provider, [
-          createElement(FormFactory, { props }),
-        ]);
+        if (Provider) {
+          return createElement(Provider, [
+            createElement(FormFactory, { props }),
+          ]);
+        }
+        return createElement(FormFactory, { props });
       },
     };
   }
