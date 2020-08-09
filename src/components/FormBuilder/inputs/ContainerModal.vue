@@ -28,6 +28,7 @@ import { Component, Provide } from 'vue-property-decorator';
 import { VSlider } from 'vuetify/lib';
 import FormBuilder from '@/utils/formbuilder/formbuilder';
 import { Container } from '@/types/entities';
+import Spacing from '@/components/FormBuilder/inputs/Spacing.vue';
 
 @Component({
   components: {
@@ -45,6 +46,11 @@ import { Container } from '@/types/entities';
             'tick-labels': [1, 2, 3, 4, 5],
           },
         },
+      },
+      {
+        component: Spacing,
+        label: 'Отступы',
+        name: 'spacing',
       },
     ]).build(),
   },
