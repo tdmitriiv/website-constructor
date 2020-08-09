@@ -31,8 +31,8 @@ import { Container } from '@/types/entities';
 
 @Component({
   components: {
-    ContainerForm: new FormBuilder()
-      .addField({
+    ContainerForm: new FormBuilder([
+      {
         component: VSlider,
         label: 'Количество секций',
         name: 'sectionCount',
@@ -45,8 +45,8 @@ import { Container } from '@/types/entities';
             'tick-labels': [1, 2, 3, 4, 5],
           },
         },
-      })
-      .build(),
+      },
+    ]).build(),
   },
 })
 export default class ContainerModal extends Vue {

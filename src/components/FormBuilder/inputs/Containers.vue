@@ -25,7 +25,7 @@
 import Vue from 'vue';
 import { Component, Prop } from 'vue-property-decorator';
 import { Container } from '@/types/entities';
-import ContainerModal from '@/components/create/ContainerModal.vue';
+import ContainerModal from '@/components/FormBuilder/inputs/ContainerModal.vue';
 
 @Component({
   components: {
@@ -44,12 +44,12 @@ export default class Containers extends Vue {
   showAddContainerModal(): void {
     console.log('Show add container');
     this.isAddModalVisible = true;
-    this.$emit('input', [
-      ...this.value,
-      {
-        sections: [],
-      },
-    ]);
+    // this.$emit('input', [
+    //   ...this.value,
+    //   {
+    //     sections: [],
+    //   },
+    // ]);
   }
 }
 </script>

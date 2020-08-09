@@ -1,7 +1,7 @@
 import { VTextField } from 'vuetify/lib';
 import PageProvider from '@/components/create/PageProvider.vue';
 import FormBuilder from '@/utils/formbuilder/formbuilder';
-import Containers from '@/components/FormBuilder/Containers.vue';
+import Containers from '@/components/FormBuilder/inputs/Containers.vue';
 
 export default class FormDirector {
   builder: FormBuilder;
