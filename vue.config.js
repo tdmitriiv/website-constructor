@@ -4,7 +4,7 @@ module.exports = {
   ],
   devServer: {
     watchOptions: {
-      poll: true
-    }
-  }
+      poll: true,
+    },
+  },
 };

@@ -1,9 +1,9 @@
 import { Page } from '@/types/entities';
 
 export interface RootState {
-    version: string
+    version: string;
 }
 
 export interface PagesState {
-    pages: Page[]
+    pages: Page[];
 }
